@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-VERSION="7.0.2.3"
+VERSION="6.1.5"
 PATH=/var/runtime/bin/:$PATH
 PROJECT_FOLDER="{{cookiecutter.project_name}}"
 
@@ -20,7 +20,8 @@ rails _"$VERSION"_ new rename_me \
   --skip-active-storage \
   --skip-puma \
   --skip-action-cable \
-  --skip-bootsnap \
-  --skip-hotwire
+  --skip-spring \
+  --skip-listen \
+  --skip-bootsnap
 
 mv "rename_me" "$PROJECT_FOLDER"
